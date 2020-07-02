@@ -1,2 +1,3 @@
-# JC
-Jinwoldong Class(코딩소모임)
+## FIRST MEETINGS
+
+start 07/02
