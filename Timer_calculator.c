@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ë°”ë³´ì•¼#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 int main()
@@ -15,7 +15,7 @@ int main()
 	int count = 0;
 	if (fp == NULL)
 	{
-		printf("ÆÄÀÏ¿­±â ½ÇÆĞ\n");
+		printf("íŒŒì¼ì—´ê¸° ì‹¤íŒ¨\n");
 		return 1;
 	}
 	while (fgets(time1, 20, fp) != NULL)
@@ -37,9 +37,9 @@ int main()
 		sum += ((hour2 * 60) + min2) - ((hour1 * 60) - min1);
 		count++;
 	}
-	printf("ÃÑ ºĞ : %d  ÀÏÇÑ ³¯Â¥ : %d\n", sum,count);
+	printf("ì´ ë¶„ : %d  ì¼í•œ ë‚ ì§œ : %d\n", sum,count);
 	double sum1 = sum / 60;
-	printf("ÃÑ ½Ã°£ : %lf\n", sum1);
-	printf("ÀÌ¹ø ´Ş ¿ù±Ş : %lf\n", sum1 * 8590);
+	printf("ì´ ì‹œê°„ : %lf\n", sum1);
+	printf("ì´ë²ˆ ë‹¬ ì›”ê¸‰ : %lf\n", sum1 * 8590);
 	return 0;
 }
