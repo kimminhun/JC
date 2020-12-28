@@ -1,0 +1,72 @@
+#include<stdio.h>
+
+int main(void) {
+	int input1 = 0;
+	int input2 = 0;
+	char oper;
+	char buffer;
+	char buffer2;
+	int max = 0;
+	int min = 0;
+	int result = 0;
+	double divResult = 0;
+	
+	while (1) {
+			printf("--------------------\n");
+			printf("input1 : ");
+			scanf_s("%d", &input1);
+			if (input1 > 100) {
+				printf("wrong input!!!\n\n");
+				continue;
+			}
+				printf("input2 : ");
+				scanf_s("%d", &input2);
+			if(input2 >100 && input1<100){
+				printf("wrong input!!!\n\n");
+				continue;
+					}
+			else{
+			printf("oper : ");
+			scanf_s("%c", &buffer);
+			scanf_s("%c", &oper, 1);
+			if (!(oper == '+' || oper == '-' || oper == '/' || oper == '*')) {
+				printf("wrong oper!!!\n\n");
+				continue;
+				scanf_s("%c", &buffer);
+				}
+				if (input1 >= input2) {
+				max = input1;
+				min = input2;
+				}
+				else {
+				max = input2;
+				min = input1;
+				}
+				switch (oper) {
+				case '+':
+					result = max + min;
+					printf("result : %d + %d = %d\n\n", max, min, result);
+					
+					break;
+				case '-':
+					result = max - min;
+					printf("result : %d - %d = %d\n\n", max, min, result);
+					
+					break;
+				case '*':
+					result = max * min;
+					printf("result : %d * %d = %d\n\n", max, min, result);
+					
+					break;
+				case '/':
+					divResult = (double)max / min;
+					printf("result : %d  / %d = %f\n\n", max, min, divResult);
+					
+					break;
+				default:
+					break;
+				}
+			}
+		}
+	return 0;
+}
